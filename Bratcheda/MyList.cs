@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MeAndMySpace
 {
-    class SlectedNumbers
+    class MyList
     {
-        public int SelectedNo { get; set; }
-        public int DigitsSum { get; set; }
-        public int DigitsProduct { get; set; }
+        public int ItemNo { get; set; }
+        public int Number { get; set; }
+       
     }
 }

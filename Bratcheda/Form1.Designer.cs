@@ -33,32 +33,41 @@
             label1 = new Label();
             label2 = new Label();
             bntClaculate = new Button();
+            label3 = new Label();
+            bntClear = new Button();
+            label4 = new Label();
+            comboBox1 = new ComboBox();
+            bntList = new Button();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // listBox1
             // 
+            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(12, 12);
+            listBox1.Location = new Point(12, 62);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(182, 429);
+            listBox1.Size = new Size(182, 629);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(261, 12);
+            dataGridView1.Location = new Point(198, 188);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(360, 225);
+            dataGridView1.Size = new Size(841, 503);
             dataGridView1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(426, 278);
+            label1.Location = new Point(288, 62);
             label1.Name = "label1";
             label1.Size = new Size(59, 25);
             label1.TabIndex = 2;
@@ -67,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(290, 342);
+            label2.Location = new Point(326, 87);
             label2.Name = "label2";
             label2.Size = new Size(59, 25);
             label2.TabIndex = 3;
@@ -75,7 +84,7 @@
             // 
             // bntClaculate
             // 
-            bntClaculate.Location = new Point(644, 58);
+            bntClaculate.Location = new Point(198, 148);
             bntClaculate.Name = "bntClaculate";
             bntClaculate.Size = new Size(112, 34);
             bntClaculate.TabIndex = 4;
@@ -83,11 +92,86 @@
             bntClaculate.UseVisualStyleBackColor = true;
             bntClaculate.Click += bntClaculate_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(198, 62);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Selected";
+            // 
+            // bntClear
+            // 
+            bntClear.Location = new Point(316, 148);
+            bntClear.Name = "bntClear";
+            bntClear.Size = new Size(165, 34);
+            bntClear.TabIndex = 6;
+            bntClear.Text = "Clear selected";
+            bntClear.UseVisualStyleBackColor = true;
+            bntClear.Click += bntClear_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(198, 87);
+            label4.Name = "label4";
+            label4.Size = new Size(131, 25);
+            label4.TabIndex = 7;
+            label4.Text = "Selected Count";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(898, 33);
+            comboBox1.TabIndex = 8;
+            // 
+            // bntList
+            // 
+            bntList.Location = new Point(930, 12);
+            bntList.Name = "bntList";
+            bntList.Size = new Size(46, 33);
+            bntList.TabIndex = 9;
+            bntList.Text = "Go";
+            bntList.UseVisualStyleBackColor = true;
+            bntList.Click += bntList_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.DarkOliveGreen;
+            label5.ForeColor = SystemColors.ButtonFace;
+            label5.Location = new Point(951, 126);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 25);
+            label5.TabIndex = 10;
+            label5.Text = "min value";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Red;
+            label6.ForeColor = SystemColors.ButtonFace;
+            label6.Location = new Point(951, 153);
+            label6.Name = "label6";
+            label6.Size = new Size(91, 25);
+            label6.TabIndex = 11;
+            label6.Text = "max value";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1053, 723);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(bntList);
+            Controls.Add(comboBox1);
+            Controls.Add(label4);
+            Controls.Add(bntClear);
+            Controls.Add(label3);
             Controls.Add(bntClaculate);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -109,5 +193,12 @@
         private Label label1;
         private Label label2;
         private Button bntClaculate;
+        private Label label3;
+        private Button bntClear;
+        private Label label4;
+        private ComboBox comboBox1;
+        private Button bntList;
+        private Label label5;
+        private Label label6;
     }
 }
