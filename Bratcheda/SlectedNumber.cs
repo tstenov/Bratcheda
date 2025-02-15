@@ -13,6 +13,7 @@ namespace MeAndMySpace
         public int DigitsSum { get; set; }
         public int DigitsProduct { get; set; }
         public bool IsPrime { get; set; }
-
+        public bool Note1 { get; set; }
+        public bool Note2 { get; set; }
     }
 }

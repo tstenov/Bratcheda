@@ -67,7 +67,7 @@ namespace Bratcheda
                     var folderBrowserDialog1 = new FolderBrowserDialog();
                     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-                    saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
                     saveFileDialog1.FilterIndex = 2;
                     saveFileDialog1.RestoreDirectory = true;
 
@@ -136,6 +136,10 @@ namespace Bratcheda
                     string input1 = Microsoft.VisualBasic.Interaction.InputBox("Please enter value to to added", "Add to List", "", this.Left + (this.Width / 2) - 200, this.Top + (this.Height / 2) - 100);
                     if (int.TryParse(input1, out int value))
                     {
+                        if (myList == null)
+                        {
+myList= new List<int>();
+                        }
                         var newVal= Int32.Parse(input1);
                         if (myList.Contains(newVal))
                         {
@@ -247,7 +251,9 @@ namespace Bratcheda
                 label2.Text = "";
             }
 
-
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
         }
 
         private void ListBox1_MouseClick(object sender, MouseEventArgs e)
@@ -269,6 +275,8 @@ namespace Bratcheda
             {
                 var itemNo = 1;
                 string[] items = listBox1.SelectedItems.OfType<object>().Select(item => item.ToString()).ToArray();
+                var listMax = myList.Max();
+
                 foreach (string item in items)
                 {
                     int selNo = Int32.Parse(item);
@@ -281,6 +289,8 @@ namespace Bratcheda
                     selNoPross.DigitsSum = makeCalc.FindSumFromNumberDigits(selNo);
                     selNoPross.DigitsProduct = makeCalc.FindProductFromNumberDigits(selNo);
                     selNoPross.IsPrime = makeCalc.isPrime(selNo);
+                    selNoPross.Note1 = makeCalc.isPowerOf2LessThanMaxInList(selNo, listMax);
+                    selNoPross.Note2 = makeCalc.isSQRTInteger(selNo);
                     selectedNumbersProssesed.Add(selNoPross);
                 }
 

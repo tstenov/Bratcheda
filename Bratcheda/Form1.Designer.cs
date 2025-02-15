@@ -40,6 +40,8 @@
             bntList = new Button();
             label5 = new Label();
             label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             dataGridView1.Location = new Point(198, 188);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(841, 503);
+            dataGridView1.Size = new Size(1202, 503);
             dataGridView1.TabIndex = 1;
             // 
             // label1
@@ -105,9 +107,9 @@
             // 
             bntClear.Location = new Point(316, 148);
             bntClear.Name = "bntClear";
-            bntClear.Size = new Size(165, 34);
+            bntClear.Size = new Size(270, 34);
             bntClear.TabIndex = 6;
-            bntClear.Text = "Clear selected";
+            bntClear.Text = "Clear selected in the list";
             bntClear.UseVisualStyleBackColor = true;
             bntClear.Click += bntClear_Click;
             // 
@@ -143,7 +145,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.DarkOliveGreen;
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(951, 126);
+            label5.Location = new Point(881, 159);
             label5.Name = "label5";
             label5.Size = new Size(88, 25);
             label5.TabIndex = 10;
@@ -154,17 +156,37 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Red;
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(951, 153);
+            label6.Location = new Point(975, 159);
             label6.Name = "label6";
             label6.Size = new Size(91, 25);
             label6.TabIndex = 11;
             label6.Text = "max value";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(881, 102);
+            label7.Name = "label7";
+            label7.Size = new Size(519, 25);
+            label7.TabIndex = 12;
+            label7.Text = "Note1 - 'SelectedNo' on power of two is less than max in the list";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(881, 127);
+            label8.Name = "label8";
+            label8.Size = new Size(379, 25);
+            label8.TabIndex = 13;
+            label8.Text = "Note2 - 'SelectedNo' square root  is an integer";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1053, 723);
+            ClientSize = new Size(1414, 723);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(bntList);
@@ -200,5 +222,7 @@
         private Button bntList;
         private Label label5;
         private Label label6;
+        private Label label7;
+        private Label label8;
     }
 }

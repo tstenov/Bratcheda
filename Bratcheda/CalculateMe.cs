@@ -46,5 +46,29 @@ namespace Bratcheda
             }
             return true;
         }
+        public bool isPowerOf2LessThanMaxInList(int n,int maxVal)
+        {
+            if (Math.Pow(n, 2) < maxVal)
+            {
+                return true;
+            }
+           else
+            {
+                return false;
+            }
+            
+        }
+        public bool isSQRTInteger(int n)
+        {
+            if (Math.Sqrt(n) - Convert.ToInt32(Math.Sqrt(n))==0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }
